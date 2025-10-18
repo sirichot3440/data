@@ -1,0 +1,56 @@
+body {
+  font-family: 'Sarabun', sans-serif;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+input {
+  margin: 5px 0;
+  padding: 6px;
+  width: 100%;
+}
+
+/* ปุ่มคำนวณเป็นสีส้ม */
+button[type='submit'] {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hover สีเข้มขึ้น */
+button[type='submit']:hover {
+  background-color: darkorange;
+}
+
+/* ปุ่มรีเซตเป็นสีน้ำเงิน */
+button[type='reset'] {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hover สีเข้มขึ้น */
+button[type='reset']:hover {
+  background-color: darkblue;
+}
+
+/* ข้อความคงเหลือสีเขียว */
+.balance {
+  color: green;
+  font-weight: bold;
+}

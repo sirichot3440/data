@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>โปรแกรมคำนวณรายรับรายจ่าย</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>โปรแกรมคำนวณรายรับ - รายจ่าย</h1>
+
+    <form method="POST">
+      <h2>รายรับ (บาท)</h2>
+      <label>เงินเดือนและรายได้พิเศษ:</label>
+      <input type="number" step="0.01" name="income_salary" /><br />
+      <label>เงินบำนาญ:</label>
+      <input type="number" step="0.01" name="income_pension" /><br />
+      <label>รายได้จากการลงทุน:</label>
+      <input type="number" step="0.01" name="income_invest" /><br />
+      <label>รายได้อื่น ๆ:</label>
+      <input type="number" step="0.01" name="income_other" /><br />
+
+      <h2>รายจ่าย (บาท)</h2>
+      <label>ที่อยู่อาศัย:</label>
+      <input type="number" step="0.01" name="house" /><br />
+      <label>เงินกู้หรือหนี้สิน:</label>
+      <input type="number" step="0.01" name="loan" /><br />
+      <label>ค่าสาธารณูปโภค:</label>
+      <input type="number" step="0.01" name="utilities" /><br />
+      <label>ค่าอาหาร:</label>
+      <input type="number" step="0.01" name="food" /><br />
+      <label>ค่าเดินทาง:</label>
+      <input type="number" step="0.01" name="travel" /><br />
+      <label>ค่าบันเทิง:</label>
+      <input type="number" step="0.01" name="entertainment" /><br />
+      <label>ค่ารักษาพยาบาล:</label>
+      <input type="number" step="0.01" name="health" /><br />
+      <label>ค่าใช้จ่ายด้านการศึกษา:</label>
+      <input type="number" step="0.01" name="education" /><br />
+      <label>อื่น ๆ:</label>
+      <input type="number" step="0.01" name="others" /><br />
+
+      <button type="submit">คำนวณ</button>
+      <button type="reset">รีเซต</button>
+    </form>
+
+    <hr />
+    <h2>ผลการคำนวณ</h2>
+    <p>รวมรายรับทั้งหมด: {{ total_income }} บาท</p>
+    <p>รวมรายจ่ายทั้งหมด: {{ total_expense }} บาท</p>
+    <p><strong class="balance">คงเหลือ: {{ balance }} บาท</strong></p>
+  </body>
+</html>
