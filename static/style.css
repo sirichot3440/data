@@ -1,56 +1,98 @@
 body {
-  font-family: 'Sarabun', sans-serif;
-  max-width: 700px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f8f9fa;
+    font-family: "Sarabun", sans-serif;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
-h1,
-h2 {
-  color: #333;
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
 }
 
-input {
-  margin: 5px 0;
-  padding: 6px;
-  width: 100%;
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-/* ปุ่มคำนวณเป็นสีส้ม */
-button[type='submit'] {
-  background-color: orange;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-/* Hover สีเข้มขึ้น */
-button[type='submit']:hover {
-  background-color: darkorange;
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
-/* ปุ่มรีเซตเป็นสีน้ำเงิน */
-button[type='reset'] {
-  background-color: blue;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
-/* Hover สีเข้มขึ้น */
-button[type='reset']:hover {
-  background-color: darkblue;
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-/* ข้อความคงเหลือสีเขียว */
+button[type="submit"] {
+    background-color: #fd7e14;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #e46b06;
+}
+
+button[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    float: right;
+}
+
+button[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    margin: 40px 0 20px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
 .balance {
-  color: green;
-  font-weight: bold;
+    color: #28a745;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+        float: none;
+    }
 }
